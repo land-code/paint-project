@@ -43,13 +43,9 @@ export const useDrawing = ({ canvas }: useDrawingProps) => {
     }
 
     const handleMouseUp = (e: MouseEvent) => {
-      const finalX = e.pageX - canvasLeft
-      const finalY = e.pageY - canvasTop
-  
       if (!activeSquare) return
-  
+
       setSquares([...squares, activeSquare])
-  
       setActiveSquare(null)
     }
 
